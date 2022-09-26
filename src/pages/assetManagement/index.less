@@ -1,0 +1,476 @@
+@screen-sm: 576px;
+@screen-md: 768px;
+@screen-lg: 992px;
+@screen-xl: 1200px;
+@screen-xxl: 1600px;
+
+// common
+.flexSpace {
+  display: flex;
+  justify-content: space-between;
+}
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+// index
+.appWrap {
+  padding: 15px 15px 10px 15px;
+  cursor: pointer;
+  .appName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .appDesc {
+    height: 60px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .appIcon {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .appNum {
+    font-size: 12px;
+  }
+}
+.searchBar {
+  padding: 24px 24px 0 24px;
+}
+.appCreateItem {
+  margin-bottom: 10px;
+}
+
+.siteMapWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 50px);
+}
+
+// apiTotal
+.apiMuiltyWrap {
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+// casMuiltySelect
+.parentCheckboxWrap {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+.fileIcon {
+  margin-right: 5px;
+}
+.pRightBadge {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background: rgb(236, 227, 227);
+  border-radius: 8px;
+}
+
+.pRightBadge2 {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  padding: 0 4px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background: rgb(224, 223, 223);
+  border-radius: 4px;
+}
+
+.flexNode {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apiNodeName {
+  margin-right: 10px;
+}
+
+// apiDetail
+.apiDetailItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.apiDetalLabel {
+  width: 120px;
+  margin-right: 140px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.apiTab {
+  margin-top: 6px;
+  font-size: 18px;
+}
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+// appDetail
+.salesBar {
+  height: 412px;
+  margin-bottom: 32px;
+}
+.salesRank {
+  padding: 0 32px 32px 72px;
+}
+.timeActive {
+  margin: 0 10px;
+  color: @primary-color;
+}
+.timeUnActive {
+  margin: 0 10px;
+}
+.rankingList {
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    zoom: 1;
+    &::before,
+    &::after {
+      display: table;
+      content: ' ';
+    }
+    &::after {
+      clear: both;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    span {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    .rankingItemNumber {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-top: 1.5px;
+      margin-right: 16px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 20px;
+      &.active {
+        color: #fff;
+        background-color: @primary-color;
+      }
+    }
+    .rankingItemTitle {
+      flex: 1;
+      margin-right: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.apiFlexWrap {
+  display: flex;
+  min-height: 200px;
+  .apiFlexLeft {
+    width: 30%;
+    margin-right: 16px;
+    word-break: break-all;
+    border: 1px solid #f0f0f0;
+    .apiTotalFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-top: 1px solid #f0f0f0;
+    }
+  }
+  .apiFlexRight {
+    flex: 1;
+    overflow-x: auto;
+    border: 1px solid #f0f0f0;
+  }
+  .apiHeader {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px 8px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .totalTitle {
+    padding-right: 24px;
+  }
+  .rootSearch {
+    flex: 1;
+  }
+}
+
+.apiDetailWrap {
+  // overflow: auto;
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+}
+
+.proCardContainer {
+  :global {
+    .ant-pro-card-header,
+    .ant-pro-card-body {
+      padding: 16px 24px;
+    }
+  }
+}
+
+.appCardFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.applist {
+  display: block;
+  min-width: 60px;
+  height: 30px;
+  padding: 0 8px;
+  line-height: 30px;
+  background: #f1f9ff;
+  border-radius: 5px;
+}
+
+.baseInfo {
+  padding: 10px 24px;
+  .infoItem {
+    display: flex;
+    margin-top: 9px;
+  }
+  .itemTitle {
+    display: inline-block;
+    width: 84px;
+    margin-right: 44px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    line-height: 22px;
+    text-align: left;
+  }
+  .itemValue {
+    flex: 1;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 400;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    line-height: 22px;
+    text-align: left;
+    word-break: break-all;
+  }
+}
+
+.moreIcon {
+  float: right;
+  font-size: 16px;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+// .appTimeAndHost {
+//   color: #fff;
+//   font-size: 12px;
+// }
+.countCol {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: @screen-md) {
+  .appTimeAndHost {
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: @screen-md) {
+  .appTimeAndHost {
+    width: 50px;
+  }
+}
+
+@media screen and (min-width: @screen-lg) {
+  .appTimeAndHost {
+    width: 40px;
+  }
+  .appTimeAndHostCol {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: @screen-xl) {
+  .appTimeAndHost {
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: @screen-xxl) {
+  .appTimeAndHost {
+    width: 128px;
+  }
+}
+.ellipsisOutlined:hover {
+  background-color: #f1f9ff;
+}
+.unAssorted {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.unAssortedCount {
+  height: 15px;
+  padding: 0;
+  font-weight: 800;
+  line-height: 15px;
+}
+.afterCountIcon {
+  height: 12px;
+  font-size: 12px;
+}
+.AppList {
+  :global {
+    .ant-pro-card-body {
+      height: 219px;
+      padding-top: 11px;
+    }
+  }
+}
+.App {
+  margin-right: 16px;
+  margin-bottom: 16px;
+
+  :global {
+    .ant-pro-card-body {
+      height: 60px;
+      margin-right: 16px;
+      padding: 8px 0 8px 16px;
+      border-radius: 8px;
+    }
+  }
+}
+.App:hover {
+  cursor: pointer;
+}
+.AppTitle {
+  font-size: 14px;
+}
+.apiCount {
+  font-size: 10px;
+  transform: scale(0.83, 0.83);
+}
+.noAppShow {
+  :global {
+    .ant-pro-card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 219px;
+      padding-top: 11px;
+    }
+  }
+}
+.noAppUnAssorted {
+  padding: 0;
+  font-size: 14px;
+}
+.noAppUnAssortedCount {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+}
+.extendListTop {
+  display: flex;
+  justify-content: space-between;
+}
+.extendUnAssorted {
+  margin-right: 8px;
+  font-size: 12px;
+}
+.extendUnAssortedCount {
+  font-weight: 800;
+  font-size: 14px;
+}
+.searchForm {
+  height: 28px;
+}
+.extendListFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+.dataTag {
+  padding: 24px;
+}
+
+.rawContentWrap {
+  position: relative;
+  padding: 16px;
+  .copyBtn {
+    position: absolute;
+    top: 10;
+    right: 18px;
+    display: none;
+  }
+  &:hover {
+    .copyBtn {
+      display: block;
+    }
+  }
+}
+.xhr {
+  min-height: 40px;
+  overflow: auto;
+  font-weight: 400;
+  font-size: 13px;
+  font-family: Courier, 'Courier New', monospace, 'PingFang SC', 'microsoft yahei', Tahoma, Arial,
+    sans-serif;
+  line-height: 22px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.emptyWrapper {
+  margin: 0;
+}

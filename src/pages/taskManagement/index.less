@@ -1,0 +1,98 @@
+.taskSumary {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  .tabTitle {
+    padding-bottom: 16px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .taskTotal {
+    width: 360px;
+    margin-left: 60px;
+    .taskTotalHead {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+      border-bottom: 1px solid #666;
+    }
+    .taskItemWrap {
+      margin-bottom: 20px;
+    }
+    .taskTotalItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      line-height: 2.5;
+      .taskTotalLabel {
+        margin-left: 6px;
+        font-weight: 500;
+      }
+      > span {
+        font-weight: 500;
+      }
+      .dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 6px;
+        background: #ddd;
+        border-radius: 50%;
+      }
+    }
+    .totalNumItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 5px;
+      border-top: 1px solid #f0f0f0;
+    }
+  }
+}
+
+.tableCard {
+  padding: 4px 8px;
+  .tableFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 28px;
+  }
+}
+
+.tipHeader {
+  color: #666;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.tipContent {
+  height: 100px;
+  overflow-y: auto;
+  .tipAppName {
+    line-height: 2.5;
+    cursor: pointer;
+  }
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #ddd;
+  border-radius: 50%;
+}
+.appCreateItem {
+  margin-bottom: 16px;
+  > label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+}
+
+.searchArea {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}

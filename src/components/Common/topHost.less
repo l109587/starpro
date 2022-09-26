@@ -1,0 +1,61 @@
+@import '~antd/es/style/themes/default.less';
+
+.topbox {
+  .trendTitle {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  .topList {
+    height: 362px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    list-style: none;
+    li {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      padding-right: 10px;
+      overflow: auto;
+      zoom: 1;
+      &::before,
+      &::after {
+        display: table;
+        content: ' ';
+      }
+      &::after {
+        clear: both;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+      }
+      span {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .topItemNumber {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-top: 1.5px;
+        margin-right: 24px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 20px;
+        &.active {
+          color: #fff;
+          background-color: @primary-color;
+        }
+      }
+      .topItemTitle {
+        flex: 1;
+        margin-right: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.appsCard {
+  width: 380px;
+  height: 160px;
+  overflow: auto;
+  background: #f6fbff;
+  border: 0.5px solid rgba(0, 0, 0, 0.01);
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.appItem {
+  width: 100%;
+  padding: 4px 2px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #108ee9;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+
+  :global {
+    .ant-typography {
+      color: #108ee9;
+    }
+  }
+}
+
+.appItemChecked {
+  background-color: #108ee9;
+
+  :global {
+    .ant-typography {
+      color: #fff;
+    }
+  }
+}
+
+.dynamicButton {
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.emailTitle {
+  margin-bottom: 8px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.hookTitle {
+  margin-bottom: 8px;
+  padding-bottom: 2px;
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+}
+.hookBody {
+  height: 150px;
+  overflow: auto;
+}
+
+.jsonInputor {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: Courier, 'Courier New', monospace, 'PingFang SC', 'microsoft yahei', Tahoma, Arial,
+    sans-serif;
+}
+
+.guideWrapper {
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+.guideContent {
+  padding: 8px 14px;
+
+  ul {
+    margin-bottom: 0;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    padding-left: 10px;
+    text-indent: 4px;
+
+    > span {
+      margin-right: 4px;
+    }
+
+    :global {
+      div.ant-typography,
+      .ant-typography p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

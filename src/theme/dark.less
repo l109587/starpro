@@ -1,0 +1,367 @@
+@bgc-dark: #101023;
+@main-bgc-dark: #1d1d42;
+@border-color-dark: rgba(186, 208, 241, 0.1);
+@checkbox-bgc-dark: @main-bgc-dark;
+@menu-item-selected-bgc-dark: #26264e;
+@drawer-bgc-dark: #141432;
+
+.body-wrap-dark {
+  color: @text-color-dark;
+  h1, h2, h3, h4, h5, h6 {
+    color: @text-color-dark;
+  }
+  .ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+    background-color: @bgc-dark;
+  }
+  .ant-layout-sider-children {
+    background-color: @main-bgc-dark;
+  }
+  .ant-layout {
+    background-color: @bgc-dark;
+  }
+  .ant-layout-footer {
+    background-color: @bgc-dark;
+  }
+  .ant-pro-sider-extra {
+    color: @text-color-dark;
+    background-color: @main-bgc-dark;
+  }
+  .ant-menu-inline.ant-menu-sub {
+    background-color: @main-bgc-dark !important;
+  }
+  .ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+    background-color: @main-bgc-dark !important;
+  }
+  .ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: @menu-item-selected-bgc-dark !important;
+  }
+  .ant-pro-page-container-warp {
+    background-color: @main-bgc-dark;
+  }
+  .ant-page-header {
+    background-color: @main-bgc-dark;
+  }
+  .ant-pro-card:not(.ant-pro-card-ghost) {
+    background-color: @main-bgc-dark;
+  }
+  .ant-breadcrumb {
+    color: @text-color-secondary-dark;
+  }
+  .ant-breadcrumb > span:last-child {
+    color: @text-color-dark;
+  }
+  .ant-breadcrumb-separator {
+    color: @text-color-secondary-dark;
+  }
+  .ant-tabs {
+    color: @text-color-secondary-dark;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: @text-color-dark;
+  }
+  .ant-pro-card-title {
+    color: @text-color-dark;
+  }
+  .ant-card {
+    background-color: @main-bgc-dark;
+  }
+  .ant-pro-global-footer-copyright {
+    color: @text-color-secondary-dark;
+  }
+  .ant-pro-table-list-toolbar-title {
+    color: @text-color-dark;
+  }
+  .ant-pro-table-list-toolbar-setting-item {
+    color: @text-color-dark;
+  }
+  .ant-form-item-label > label {
+    color: @text-color-dark;
+  }
+  .ant-pagination {
+    color: @text-color-secondary-dark;
+  }
+  .ant-pagination-item {
+    background-color: transparent;
+
+    a {
+      color: @text-color-secondary-dark;
+    }
+  }
+  .ant-pagination-item-active {
+    background-color: @primary-color;
+    &:hover a {
+      color: @text-color-secondary-dark;
+    }
+  }
+  .ant-pagination-disabled .ant-pagination-item-link,
+  .ant-pagination-disabled:hover .ant-pagination-item-link {
+    color: @text-color-secondary-dark;
+  }
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    color: @text-color-secondary-dark;
+    background-color: transparent;
+  }
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: @text-color-secondary-dark;
+  }
+  .ant-list-item {
+    color: @text-color-secondary-dark;
+  }
+  .ant-checkbox-wrapper {
+    color: @text-color-secondary-dark;
+  }
+  .ant-typography {
+    color: @text-color-dark;
+  }
+  .ant-input-affix-wrapper {
+    color: @text-color-dark;
+    background-color: @main-bgc-dark;
+    border-color: @border-color-dark;
+    input {
+      color: @text-color-dark;
+      background-color: @main-bgc-dark;
+    }
+  }
+  .anticon.ant-input-clear-icon {
+    color: @text-color-dark;
+    &:hover {
+      color: @text-color-dark;
+    }
+  }
+  .ant-checkbox-inner {
+    background-color: @checkbox-bgc-dark;
+    border-color: @border-color-dark;
+  }
+  .ant-pagination-options-quick-jumper {
+    input {
+      color: @text-color-dark;
+      background-color: @main-bgc-dark;
+      border-color: @border-color-dark;
+    }
+  }
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: @main-bgc-dark;
+  }
+  .ant-select {
+    color: @text-color-dark;
+  }
+  .ant-select-arrow {
+    color: @text-color-dark;
+  }
+  .ant-btn-default {
+    color: @text-color-dark;
+    background-color: @main-bgc-dark;
+    border-color: @primary-color;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  .ant-empty-normal {
+    color: @text-color-dark;
+  }
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: @border-color-dark;
+  }
+  .ant-select-multiple {
+    .ant-select-selection-item {
+      background-color: @checkbox-bgc-dark;
+      border-color: fade(@text-color-dark, 45%);
+    }
+    .ant-select-selection-item-remove {
+      color: inherit;
+    }
+  }
+  .ant-select-clear {
+    background-color: transparent;
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+  .ant-input-password-icon {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+  .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper, .ant-form-item-has-error :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover, .ant-form-item-has-error :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover {
+    background-color: @main-bgc-dark;
+  }
+  .ant-table {
+    background-color: @main-bgc-dark;
+    color: @text-color-dark;
+  }
+  .ant-table-thead > tr > th {
+    background-color: @main-bgc-dark;
+    color: @text-color-dark;
+    border-bottom-color: @main-bgc-dark;
+  }
+  .ant-table-tbody > tr > td {
+    border-color: @main-bgc-dark;
+  }
+  .ant-table-tbody > tr.ant-table-row:hover > td, .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+    background-color: fade(@primary-color, 35%);
+  }
+  .ant-table-tbody > tr.ant-table-row-selected > td {
+    background-color: fade(@primary-color, 35%);
+    color: @text-color-dark;
+  }
+  .ant-modal {
+    color: @text-color-dark;
+  }
+  .ant-modal-content {
+    background-color: @drawer-bgc-dark;
+  }
+  .ant-modal-header {
+    background-color: @drawer-bgc-dark;
+    border-bottom-color: @border-color-dark;
+    color: @text-color-dark;
+  }
+  .ant-modal-title {
+    color: @text-color-dark;
+  }
+  .ant-modal-close {
+    color: @text-color-dark;
+  }
+  .ant-input {
+    background-color: @main-bgc-dark;
+    color: @text-color-dark;
+    border-color: @border-color-dark;
+  }
+  .ant-badge-status-text {
+    color: @text-color-dark;
+  }
+  .ant-table-tbody > tr.ant-table-placeholder:hover > td {
+    background-color: @main-bgc-dark;
+  }
+  .ant-pro-card-border {
+    border-color: @border-color-dark;
+  }
+  .ant-drawer-content {
+    background-color: @drawer-bgc-dark;
+  }
+  .ant-btn-text {
+    color: @text-color-dark;
+  }
+  .ant-drawer-header {
+    background-color: @drawer-bgc-dark;
+    color: @text-color-dark;
+    border-bottom-color: @border-color-dark;
+  }
+  .ant-drawer-title {
+    color: @text-color-dark;
+  }
+  .ant-drawer-close {
+    color: @text-color-dark;
+  }
+  .ant-modal-footer {
+    border-top-color: @border-color-dark;
+  }
+  .ant-tree {
+    background-color: @main-bgc-dark;
+    color: @text-color-dark;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-title {
+    color: @text-color-dark;
+  }
+  .ant-tree .ant-tree-node-content-wrapper:hover {
+    background-color: fade(@primary-color, 35%);
+  }
+  .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background-color: fade(@primary-color, 35%);
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-content {
+    color: @text-color-dark;
+  }
+  .ant-btn-link[disabled], .ant-btn-link[disabled]:hover, .ant-btn-link[disabled]:focus, .ant-btn-link[disabled]:active {
+    color: fade(@text-color-dark, 35%);
+  }
+  .ant-result-title {
+    color: @text-color-dark;
+  }
+  tr.ant-table-expanded-row > td, tr.ant-table-expanded-row:hover > td {
+    background-color: @main-bgc-dark;
+  }
+  .ant-form {
+    color: @text-color-dark;
+  }
+  .ant-form-item-explain, .ant-form-item-extra {
+    color: @text-color-dark;
+  }
+  .ant-radio-wrapper {
+    color: @text-color-dark;
+  }
+  .ant-checkbox-disabled + span {
+    color: fade(@text-color-dark, 35%);
+  }
+  .ant-picker {
+    color: @text-color-dark;
+    background-color: @main-bgc-dark;
+    border-color: @border-color-dark;
+  }
+  .ant-picker-input > input {
+    color: @text-color-dark;
+  }
+  .ant-picker-separator {
+    color: @text-color-dark;
+  }
+  .ant-picker-clear {
+    background-color: transparent;
+    color: @text-color-dark;
+  }
+  .ant-picker-suffix {
+    color: @text-color-dark;
+  }
+  .ant-picker-focused .ant-picker-separator {
+    color: @text-color-dark;
+  }
+  .ant-pro-list .ant-pro-list-row.ant-pro-list-row-selected {
+    background-color: fade(@primary-color, 35%);
+  }
+  .ant-form-item-has-error .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+    background-color: @main-bgc-dark;
+  }
+  .ant-form-item {
+    color: @text-color-dark;
+  }
+  .ant-input-password-icon.anticon {
+    color: @text-color-dark;
+  }
+  .ant-input-clear-icon {
+    color: @text-color-dark;
+  }
+  .ant-input-password-icon.anticon:hover {
+    color: @text-color-dark;
+  }
+  .ant-radio-inner {
+    background-color: @checkbox-bgc-dark;
+  }
+  td.ant-table-column-sort {
+    background-color: @main-bgc-dark;
+  }
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: fade(@main-bgc-dark, 35%);
+  }
+  .ant-input[disabled] {
+    background-color: fade(@main-bgc-dark, 35%);
+    border-color: @border-color-dark;
+  }
+  .ant-input[disabled]:hover {
+    border-color: @border-color-dark;
+  }
+  .ant-btn-primary[disabled], .ant-btn-primary[disabled]:hover, .ant-btn-primary[disabled]:focus, .ant-btn-primary[disabled]:active {
+    background-color: #bdbdbd;
+  }
+  .ant-pro-table {
+    td {
+      pre {
+        background-color: transparent !important;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        width: 100% !important;
+      }
+    }
+  }
+}

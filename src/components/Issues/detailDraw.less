@@ -1,0 +1,136 @@
+.detailsDrawer {
+  :global(.ant-drawer-header) {
+    padding: 16px 32px;
+  }
+  :global(.ant-drawer-title) {
+    font-size: 20px;
+  }
+  :global(.ant-drawer-body) {
+    padding: 24px 32px;
+    padding-top: 16px;
+  }
+  .baseinfo {
+    display: flex;
+    margin-top: 9px;
+    .title {
+      display: inline-block;
+      width: 84px;
+      margin-right: 44px;
+      color: #000;
+      font-weight: 500;
+      font-size: 14px;
+      font-family: PingFangSC-Medium;
+      line-height: 22px;
+      text-align: left;
+    }
+    .content {
+      flex: 1;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: 400;
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      line-height: 22px;
+      text-align: left;
+    }
+  }
+
+  .operaBtn {
+    height: 24px;
+    margin-right: 8px;
+    padding: 0 16px;
+    color: #000;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    line-height: 24px;
+    text-align: center;
+    background: #f7f7f8;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .description,
+  .remediation,
+  .references {
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: PingFangSC-Semibold;
+    line-height: 22px;
+    text-align: left;
+    .content {
+      min-height: 80px;
+      max-height: 125px;
+      margin-top: 8px;
+      overflow: auto;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: 200;
+      font-size: 12px;
+      font-family: PingFangSC-Light;
+      line-height: 22px;
+    }
+  }
+
+  .details {
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: PingFangSC-Semibold;
+    line-height: 22px;
+    text-align: left;
+    .content {
+      min-height: 80px;
+      max-height: 150px;
+      margin-top: 8px;
+      overflow: auto;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: 200;
+      font-size: 12px;
+      font-family: PingFangSC-Light;
+    }
+  }
+
+  .description {
+    .content {
+      max-height: 125px;
+    }
+  }
+
+  .references {
+    .content {
+      min-height: 50px;
+      max-height: 70px;
+    }
+  }
+  .xhr {
+    height: 200px;
+    overflow: auto;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 400;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    line-height: 22px;
+    text-align: left;
+  }
+  .copyItem {
+    height: 36px;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    text-align: right;
+    background: #f7f7f8;
+    border-radius: 4px;
+    .btn {
+      float: right;
+      width: 62px;
+      height: 24px;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      background: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}

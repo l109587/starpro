@@ -1,0 +1,91 @@
+stages:
+  - build
+  - pack
+  - release
+  - purge
+  - deploy
+  - build-staging
+  - deploy-staging
+
+before_script:
+  - docker info
+  # - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  - export NAME=registry.starx.com/starx/starx-pro
+  - docker login registry.starx.com -u admin -p Harbor12345
+  - export TEST_IMAGE=registry.starx.com/starx/starx-pro:test
+  - export STAGING_IMAGE=registry.starx.com/starx/starx-pro
+  - echo $TARGET
+
+build-dist:
+  stage: build
+  script:
+    - ls
+    - echo "build job"
+    - yarn --registry https://registry.npm.taobao.org/
+    - yarn build
+  artifacts:
+    expire_in: 10 mins
+    paths:
+      - dist
+    only:
+      - dev
+
+pack-image:
+  stage: pack
+  script:
+    - echo "pack job"
+    - docker build -t $TEST_IMAGE .
+  only:
+    - dev
+
+release-image:
+  stage: release
+  script:
+    - echo "release job"
+    - export tag=`echo $TEST_IMAGE | awk -F":" '{print $2}'`
+
+    - docker push $TEST_IMAGE
+    - sed -r -i '/checksum\/config.*/a\        rollme':' {{ randAlphaNum 5 | quote }}' chart/$CI_PROJECT_NAME/templates/deployment.yaml
+    - sed -r -i 's@(repository:).*@\1 '$NAME'@'     chart/$CI_PROJECT_NAME/values.yaml
+    - sed -r -i 's/(tag:.?)".*"/\1"'$tag'"/'            chart/$CI_PROJECT_NAME/values.yaml
+    - /bin/cp  -rf chart/$CI_PROJECT_NAME               /home/starcross/tmp
+  only:
+    - dev
+
+purge-image:
+  stage: purge
+  script:
+    - docker rmi $TEST_IMAGE
+    - echo $TEST_IMAGE " has been remove"
+  only:
+    - dev
+
+deploy:
+  stage: deploy
+  script:
+    - helm upgrade -i $CI_PROJECT_NAME   /home/starcross/tmp/$CI_PROJECT_NAME -n app --kubeconfig /home/starcross/.dev/config
+  only:
+    - dev
+
+build-staging:
+  stage: build-staging
+  script:
+    - export tag=master-$CI_COMMIT_SHORT_SHA-`date +%Y%m%d%H%M%S`
+    - export STAGING_IMAGE=$STAGING_IMAGE:$tag
+    - docker build -t $STAGING_IMAGE -f ./Dockerfile .
+    - docker push $STAGING_IMAGE
+    - docker rmi $STAGING_IMAGE
+    - sed -r -i 's@(repository:).*@\1 '$NAME'@'     chart/$CI_PROJECT_NAME/values.yaml
+    - sed -r -i 's@(tag:.?)".*"@\1"'$tag'"@'            chart/$CI_PROJECT_NAME/values.yaml
+    - /bin/cp  -rf chart/$CI_PROJECT_NAME               /home/starcross/charts/starx/
+    - bash /home/starcross/images/starx/update.sh $STAGING_IMAGE
+  only:
+    - master
+
+deploy_staging:
+  stage: deploy-staging
+  script:
+    - helm upgrade -i $CI_PROJECT_NAME /home/starcross/charts/starx/$CI_PROJECT_NAME -n app --kubeconfig /home/starcross/.staging/config
+  only:
+    - master
+    

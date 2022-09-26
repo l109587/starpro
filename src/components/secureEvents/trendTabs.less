@@ -1,0 +1,145 @@
+@import '~antd/es/style/themes/default.less';
+
+.iconGroup {
+  span.anticon {
+    margin-left: 16px;
+    color: @text-color-secondary;
+    cursor: pointer;
+    transition: color 0.32s;
+    &:hover {
+      color: @text-color;
+    }
+  }
+}
+
+.trendExtra {
+  display: inline-block;
+  margin-right: 24px;
+  span {
+    margin-left: 24px;
+    cursor: pointer;
+    &:hover {
+      color: @primary-color;
+    }
+    &.currentDate {
+      color: @primary-color;
+    }
+  }
+}
+
+.trendCard {
+  margin-bottom: 24px !important;
+  .trendTitle {
+    margin-bottom: 28px;
+  }
+
+  .trendRank {
+    padding: 0 32px 32px 72px;
+  }
+  :global {
+    .ant-tabs-tab {
+      padding: 0;
+    }
+    .ant-pro-card-body {
+      padding: 24px 32px;
+    }
+    .ant-tabs-bar,
+    .ant-tabs-nav-wrap {
+      padding-left: 16px;
+      .ant-tabs-nav .ant-tabs-tab {
+        padding-top: 16px;
+        padding-bottom: 14px;
+        line-height: 24px;
+      }
+    }
+    .ant-tabs-extra-content {
+      padding-right: 24px;
+      line-height: 55px;
+    }
+    .ant-card-head {
+      position: relative;
+    }
+    .ant-card-head-title {
+      align-items: normal;
+    }
+  }
+}
+
+.trendCardExtra {
+  height: inherit;
+}
+
+.trendTypeRadio {
+  position: absolute;
+  right: 54px;
+  bottom: 12px;
+}
+
+.offlineCard {
+  :global {
+    .ant-tabs-ink-bar {
+      bottom: auto;
+    }
+    .ant-tabs-bar {
+      border-bottom: none;
+    }
+    .ant-tabs-nav-container-scrolling {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+    .ant-tabs-tab-prev-icon::before {
+      position: relative;
+      left: 6px;
+    }
+    .ant-tabs-tab-next-icon::before {
+      position: relative;
+      right: 6px;
+    }
+    .ant-tabs-tab-active h4 {
+      color: @primary-color;
+    }
+  }
+}
+
+.trendText {
+  margin-left: 8px;
+  color: @heading-color;
+}
+
+@media screen and (max-width: @screen-lg) {
+  .trendExtra {
+    display: none;
+  }
+
+  .topList {
+    li {
+      span:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .trendTitle {
+    margin-top: 16px;
+  }
+
+  .trendCard .trendBar {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .trendExtraWrap {
+    display: none;
+  }
+
+  .trendCard {
+    :global {
+      .ant-tabs-content {
+        padding-top: 30px;
+      }
+    }
+  }
+}

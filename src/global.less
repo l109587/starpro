@@ -1,0 +1,108 @@
+@import '~antd/es/style/themes/default.less';
+@import '~@/theme/common.less';
+@import '~@/theme/dark.less';
+@import '~@/theme/light.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+.ant-modal-title {
+  font-size: 20px !important;
+}
+
+.ant-drawer-title {
+  font-size: 20px !important;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.ant-layout-sider {
+  .ant-menu {
+    .ant-menu-submenu-title {
+      padding-left: 16px !important;
+      i {
+        right: 16px;
+      }
+    }
+    .ant-menu-item {
+      span.anticon {
+        min-width: 16px;
+        font-size: 16px;
+      }
+      span.ant-pro-menu-item {
+        color: rgba(255, 255, 255, 0.76);
+      }
+    }
+    .ant-menu-item-selected {
+      span.ant-pro-menu-item-title {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.loginFailedModal {
+  .ant-modal-confirm-content {
+    white-space: pre-line;
+  }
+}
+
+.ant-pro-global-footer {
+  margin-top: 24px !important;
+}
+
+.user-dropdown-overlay-collapsed {
+  .ant-dropdown-menu-item-icon {
+    margin-right: 0;
+    margin-left: 4px;
+  }
+}

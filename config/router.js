@@ -1,26 +1,26 @@
-import tacRouter from './tacRouter'
-import nbgRouter from './nbgRouter'
-import nbaRouter from './nbaRouter'
-import ntaRouter from './ntaRouter'
-import dmcRouter from './dmcRouter'
 const { SYSTEM } = process.env
-
 let routers = []
-if (SYSTEM) {
-  if (SYSTEM === 'tac') {
-    routers = tacRouter
-  } else if (SYSTEM === 'nbg') {
-    routers = nbgRouter
-  } else if (SYSTEM === 'nba') {
-    routers = nbaRouter
-  } else if (SYSTEM === 'nta') {
-    routers = ntaRouter
-  } else if (SYSTEM === 'dmc') {
-    routers = dmcRouter
-  }
-} else {
-  routers = tacRouter.concat(nbgRouter).concat(nbaRouter).concat(ntaRouter).concat(dmcRouter)
+if (SYSTEM){
+  routers = require(`../../config/routes/${SYSTEM}Router.js`)
 }
+
+
+// let routers = []
+// if (SYSTEM) {
+//   if (SYSTEM === 'tac') {
+//     routers = tacRouter
+//   } else if (SYSTEM === 'nbg') {
+//     routers = nbgRouter
+//   } else if (SYSTEM === 'nba') {
+//     routers = nbaRouter
+//   } else if (SYSTEM === 'nta') {
+//     routers = ntaRouter
+//   } else if (SYSTEM === 'dmc') {
+//     routers = dmcRouter
+//   }
+// } else {
+//   routers = tacRouter.concat(nbgRouter).concat(nbaRouter).concat(ntaRouter).concat(dmcRouter)
+// }
 
 export default [
   {
@@ -155,7 +155,6 @@ export default [
         exact: true,
         component: '@/pages/common/sysmain/update/index.js',
       },
-      ...routers,
       {
         component: '@/pages/common/404.tsx',
       },

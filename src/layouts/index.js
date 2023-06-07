@@ -6,7 +6,7 @@ import BaseLayout from './BaseLayout'
 import 'remixicon/fonts/remixicon.css';
 import 'font-awesome/less/font-awesome.less';
 import 'material-design-icons/iconfont/material-icons.css';
-import '@/assets/alibaba/iconfontalibaba.css';
+import 'common/assets/alibaba/iconfontalibaba.css';
 // import '@/assets/fonts/remixicon/remixicon.less'
 import moment from 'moment';
 const { i18n } = require('../utils/config')

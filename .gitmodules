@@ -1,0 +1,3 @@
+[submodule "starpro"]
+	path = starpro
+	url = git@github.com:l109587/starpro.git

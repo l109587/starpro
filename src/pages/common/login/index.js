@@ -23,14 +23,14 @@ import sty from './index.less'
 import { token, _Base64encode } from './lmukeyindex'
 import { language } from '@/utils/language'
 
-import bjtpTAC from '@/assets/bg-tac.png'
-import bjtpNBG from '@/assets/bg-nbg.png'
-import bjtpNBA from '@/assets/bg-nba.png'
-import bjtpNTA from '@/assets/bg-nta.png'
-import bjtpDMC from '@/assets/bg-dmc.png'
-import bjtpNMD from '@/assets/bg-nmd.png'
-import bjtpNFD from '@/assets/bg-nfd.png'
-import bjtpNBGT from '@/assets/bg-nbg-top.png'
+import bjtpTAC from 'common/assets/bg-tac.png'
+import bjtpNBG from 'common/assets/bg-nbg.png'
+import bjtpNBA from 'common/assets/bg-nba.png'
+import bjtpNTA from 'common/assets/bg-nta.png'
+import bjtpDMC from 'common/assets/bg-dmc.png'
+import bjtpNMD from 'common/assets/bg-nmd.png'
+import bjtpNFD from 'common/assets/bg-nfd.png'
+import bjtpNBGT from 'common/assets/bg-nbg-top.png'
 
 const { NODE_ENV } = process.env
 

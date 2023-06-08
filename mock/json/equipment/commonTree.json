@@ -4,7 +4,7 @@
 		{
 			"name": "sysconf",
 			"icon": "SettingOutlined",
-			"route": "/index/index",
+			"route": "/sysconf/adminacc",
 			"zh": {
 				"name": "系统配置"
 			},

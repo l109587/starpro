@@ -154,16 +154,6 @@
         "add-locale": "lingui add-locale",
         "extract": "lingui extract",
         "trans": "lingui extract --clean && node ./scripts/translate.js",
-        "doc": "docsify serve docs",
-        "start:nbg": "cross-env MOCK=on SYSTEM=nbg umi dev",
-        "start:tac": "cross-env MOCK=on SYSTEM=tac umi dev",
-        "start:nba": "cross-env MOCK=on SYSTEM=nba umi dev",
-        "start:nta": "cross-env MOCK=on SYSTEM=nta umi dev",
-        "start:dmc": "cross-env MOCK=on SYSTEM=dmc umi dev",
-        "build:nbg": "cross-env SYSTEM=nbg umi build",
-        "build:tac": "cross-env SYSTEM=tac umi build",
-        "build:nba": "cross-env SYSTEM=nba umi build",
-        "build:nta": "cross-env SYSTEM=nta umi build",
-        "build:dmc": "cross-env SYSTEM=dmc umi build"
+        "doc": "docsify serve docs"
     }
 }

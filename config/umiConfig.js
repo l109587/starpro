@@ -6,43 +6,64 @@ const assetDir = 'static'
 const IS_PROD = process.env.NODE_ENV !== 'development' // 是否为生产环境
 const proxyUrl = '' // 若需代理此处填入/api-nac 69行输入地址
 import routes from './router.js'
-const copyFiles = ()=>{
-  fs.cp('starpro/src/components','src/components',{recursive:true} ,(err) => {
+
+const copyDir = ()=>{
+  fs.cpSync('starpro/src/utils','src/utils',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/utils','src/utils',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/components','src/components',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/layouts','src/layouts',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/layouts','src/layouts',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/pages/common','src/pages/common',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/pages/common','src/pages/common',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/services','src/services',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/services','src/services',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/themes','src/themes',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/themes','src/themes',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/src/models','src/models',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/src/models','src/models',{recursive:true} ,(err) => {
     if (err) {
       console.error(err);
     }
   })
-  fs.cp('starpro/public','public',{recursive:true} ,(err) => {
+  fs.cpSync('starpro/public','public',{recursive:true} ,(err) => {
+    if (err) {
+      console.error(err);
+    }
+  })
+  fs.cpSync('starpro/src/locales/zh-CN/adminacc.ts','src/locales/zh-CN/adminacc.ts',{recursive:false},(err) => {
+    if (err) {
+      console.error(err);
+    }
+  })
+  fs.cpSync('starpro/src/locales/zh-CN/sysmain.ts','src/locales/zh-CN/sysmain.ts',{recursive:false},(err) => {
+    if (err) {
+      console.error(err);
+    }
+  })
+  fs.cpSync('starpro/src/locales/zh-CN/sysconf.ts','src/locales/zh-CN/sysconf.ts',{recursive:false} ,(err) => {
+    if (err) {
+      console.error(err);
+    }
+  })
+  fs.cpSync('starpro/src/locales/zh-CN/regexp.ts','src/locales/zh-CN/regexp.ts',{recursive:false} ,(err) => {
     if (err) {
       console.error(err);
     }
@@ -133,7 +154,7 @@ export default {
   },
   
   chainWebpack: function (config, { env, webpack, createCSSRule }) {
-    process.env.SYSTEM&&copyFiles()
+    process.env.SYSTEM&&copyDir()
       //全局化SYSTEM变量
     config.plugin('define').tap(([option,...rest])=>{
       const options ={

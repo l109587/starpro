@@ -155,6 +155,7 @@ export default [
         exact: true,
         component: '@/pages/common/sysmain/update/index.js',
       },
+      ...routers,
       {
         component: '@/pages/common/404.tsx',
       },

@@ -11,7 +11,6 @@ import ScrollBar from '../ScrollBar'
 import { config } from 'utils'
 import SiderMenu from './Menu'
 import styles from './Sider.less'
-import imgURL from '@/assets/logo.png'
 @withI18n()
 class Sider extends PureComponent {
   render() {

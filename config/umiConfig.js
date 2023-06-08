@@ -48,6 +48,11 @@ const copyDir = ()=>{
       console.error(err);
     }
   })
+  fs.cpSync('starpro/assets/common','src/assets/common',{recursive:true} ,(err) => {
+    if (err) {
+      console.error(err);
+    }
+  })
   fs.cpSync('starpro/src/locales/zh-CN/adminacc.ts','src/locales/zh-CN/adminacc.ts',{recursive:false},(err) => {
     if (err) {
       console.error(err);

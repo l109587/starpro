@@ -3,8 +3,8 @@ import { ProCard } from '@ant-design/pro-components'
 import { language } from '@/utils/language'
 import { Card, Row, Col } from 'antd'
 import styles from './AuthCard.less'
-import Cry from '@/assets/sys-bad.png'
-import Smile from '@/assets/sys-god.png'
+import Cry from '@/assets/common/sys-bad.png'
+import Smile from '@/assets/common/sys-god.png'
 
 const AuthCard = (props) => {
   const { infodata } = props
